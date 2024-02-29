@@ -1,4 +1,6 @@
-# file transfer
+# file transfer/文件传输服务
+
+目前只是测试还没有完善
 
 This template should help get you started developing with Vue 3 in Vite.
 
