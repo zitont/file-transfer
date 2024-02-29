@@ -1,7 +1,10 @@
 # file transfer/文件传输服务
 
 目前只是测试还没有完善
-
+ui还没完善
+下载-可以通过访问http://localhost:3000/download/文件名
+记得启动 npm run start 和 npm run dev
+启动测试服务器
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
