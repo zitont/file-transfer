@@ -19,6 +19,7 @@
     action="http://localhost:3000/upload"
     multiple
     :on-success="handleSuccess"
+    :on-error="handleError"
     :auto-upload="false"
   >
     <el-icon class="el-icon--upload"><upload-filled /></el-icon>
@@ -39,7 +40,6 @@
   </el-card>
     </el-col>
   </el-row>
-    
       </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
@@ -64,6 +64,16 @@ const handleSuccess = (response: any, file: UploadFile, fileList: UploadFile[],n
   // 处理上传成功后的逻辑
   console.log(response, file, fileList);
 }
+const handleError = (response: any, file: UploadFile, fileList: UploadFile[],name: any) => {
+  ElNotification({
+    title: "文件上传失败",
+    message:file.name,
+    type: 'error',
+  })
+  // 处理上传成功后的逻辑
+  console.log(response, file, fileList);
+}
+
 const uploadRef = ref<UploadInstance>()
 
 const submitUpload = () => {

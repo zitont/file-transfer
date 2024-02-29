@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
   destination: 'src/file-servers/uploads/',
   filename: function (req, file, cb) {
     const timestamp = Date.now(); // 生成时间戳
-    let expirationTime = 2 * 60 * 1000; // 默认过期时间为5分钟
+    let expirationTime = 5 * 60 * 1000; // 默认过期时间为5分钟
 
     if (req.body.expirationHours) {
       expirationTime = req.body.expirationHours * 3 * 60 * 60 * 1000; // 使用小时作为过期时间
@@ -84,7 +84,7 @@ const storage = multer.diskStorage({
   }
 // 每隔一段时间执行一次处理过期文件的操作
 // setInterval(processExpiredFiles, 24 * 60 * 60 * 1000); // 每隔24小时执行一次
-setInterval(processExpiredFiles, 30 * 1000); //测试
+setInterval(processExpiredFiles, 60 * 1000); //测试
   app.post('/upload', upload.single('file'), (req, res) => {
     res.status(200).send('文件上传成功');
     console.log('文件上传成功');
