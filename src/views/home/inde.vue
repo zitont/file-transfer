@@ -57,7 +57,7 @@ import type { UploadInstance } from 'element-plus'
 import { ElNotification } from 'element-plus'
 const handleSuccess = (response: any, file: UploadFile, fileList: UploadFile[],name: any) => {
   ElNotification({
-    title: response,
+    title: response.message,
     message:file.name,
     type: 'success',
   })
