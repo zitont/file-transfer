@@ -76,6 +76,8 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+fileUtils.processExpiredFiles
+//初始化处理过期文件的操作
 
 // 每隔一段时间执行一次处理过期文件的操作
 setInterval(fileUtils.processExpiredFiles, 10 * 60 * 1000); // 每隔10分钟执行一次
