@@ -16,7 +16,7 @@ ui还没完善
 记得启动 npm run start 和 npm run dev
 启动测试服务器
 This template should help get you started developing with Vue 3 in Vite.
->>>>>>> 32c0790983b0ba38451865e34a52082c5c608c91
+>>>>>>>
 
 
 ## 安装依赖
